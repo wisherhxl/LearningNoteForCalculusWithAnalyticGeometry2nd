@@ -39,5 +39,5 @@ xelatex main.tex
 
 This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for details.
 
-This project includes the `elegantbook.cls` file originally provided by [ElegantLaTeX](https://github.com/ElegantLaTeX) under the LaTeX Project Public License, v1.3c or later. Please refer to [CTAN](https://ctan.org/license/lppl) for more information.
+This project includes the `elegantbook.cls` file originally provided by [ElegantLaTeX](https://github.com/ElegantLaTeX) under the LaTeX Project Public License, v1.3c or later. Please refer to the [License](https://github.com/ElegantLaTeX/ElegantBook/blob/master/License) file or check the [CTAN](https://ctan.org/license/lppl) website for more information.
 
