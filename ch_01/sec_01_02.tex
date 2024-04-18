@@ -1,7 +1,16 @@
 \section{The Real Line and Coordinate Plane. Pythagoras}
-
+\begin{introduction}
+  \item The real line
+  \item Inequalities
+  \item Absolute values
+  \item Intervals
+  \item The coordinate plane
+  \item The distance formula
+  \item The midpoint formula
+  \item Note on Pythagoras
+\end{introduction}
 \begin{questions}
-  \item Among the words "integer", "rational", and "irrational", state the ones that apply to
+  \item Among the words ``integer'', ``rational'', and ``irrational'', state the ones that apply to
   \begin{tasks}(4)
     \task \( -\frac{2}{3}\);
     \task \(0\);
@@ -28,4 +37,45 @@
       \item irrational: \(\frac{1}{\pi}\), \(3^{1/2}\).
     \end{itemize}
   \end{solution}
+  \item Every integer is either even or odd. The even integers are those that are divisible by $2$, so $n$ is even if and only if it has the form $n=2k$ for some integer $k$. The odd integers are those that have the form $n=2k + 1$ for some integer $k$.
+  \begin{tasks}
+    \task If $n$ is even, prove that $n^2$ is also even.
+    \task If $n$ is odd, prove that $n^2$ is also odd.
+  \end{tasks}
+  \begin{proof}
+    \begin{tasks}
+      \task Let $n$ be an even integer. By definition, there exist an integer $k$ such that $n=2k$.
+
+      Consider $n^2$:
+
+      $n^2=(2k)^2=4k^2=2(2k^2)$
+
+      Since $2k^2$ is an integer, $n^2$ can be expressed in the form of $2m$ for integer $m=2k^2$, which implies that $n^2$ is even.
+
+      Therefore, if $n$ is even, then $n^2$ is also even.
+      \task Let $n$ be an odd integer. By definition, there exist an integer $k$ such that $n=2k+1$.
+
+      Consider $n^2$:
+
+      $n^2=(2k+1)^2 = 4k^2+4k+1=2(2k^2+2k) + 1$
+
+      Since $2k^2+2k$ is an integer, $n^2$ can be expressed in the form of $n = 2m+1$ for integer $m=2k^2+2k$, which implies that $n^2$ is odd.
+
+      Therefore, if $n$ is odd, then $n^2$ is also odd.
+    \end{tasks}
+  \end{proof}
+  In Problems 3-12, rewrite the given expression without using the absolute value symbol.
+  \begin{solution}
+    \item $ \left| 7 - 18 \right| = 11 $.
+    \item $ \left| 7 \right| - \left| - 18 \right| = -11 $.
+    \item $ \left| \pi - 3\right| = \pi - 3 $.
+    \item $ \left| 3 - \pi \right| = \pi - 3 $.
+    \item $ \left| x - 5 \right| = 5 - x $ if $ x < 5 $.
+    \item $ \left| x - 5 \right| = x - 5 $ if $ x > 5 $.
+    \item $ \left| x^2 + 10 \right| = x^2 + 10$.
+    \item $ \left| -11 \right| - \left| -10 \right| = 1 $.
+    \item $ \left| 1 - 3x^2 \right| = 3x^2 - 1 $ if $ x \geq 1 $.
+    \item $ \left| \sqrt{10} - 10 \right| = 10 - \sqrt{10} $.
+  \end{solution}
+
 \end{questions}
