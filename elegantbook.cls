@@ -1184,10 +1184,7 @@
   \par\noindent\textbf{\color{main}{\problemname} \theprob #1 }\rmfamily}{
   \par\ignorespacesafterend}
 
-\newenvironment{note}{
-  \par\noindent\makebox[-3pt][r]{
-    \scriptsize\color{red!90}\textdbend\quad}
-    \textbf{\color{second}\notename} \citshape}{\par}
+\newenvironment{note}[1][\notename]{\begin{tcolorbox}[thmstyle,title={#1}]}{\end{tcolorbox}}
 
 \newenvironment{proof}{
   \par\noindent\textbf{\color{second}\proofname\;}
@@ -1222,10 +1219,13 @@
   },
 }
 
-%% TODO
-\newenvironment{question}{
+\newenvironment{questions}[1][\exercisename]{
+  \vspace*{10pt}
+  \begin{center}
+    \markright{#1}
+    \textcolor{structurecolor}{\Large\bfseries\adftripleflourishleft~#1~\adftripleflourishright}
+  \end{center}
   \begin{enumerate}[label=\arabic*.]
-  
 }{
 \end{enumerate}
 }
@@ -1243,13 +1243,15 @@
 \newenvironment{problemset}[1][\xchaptertitle~\exercisename]{
   \vspace*{10pt}
   \begin{center}
-    \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{\xchaptertitle~\exercisename}{\exercisename}}
+  \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{\xchaptertitle~\exercisename}{\exercisename}}
     % \markboth{#1}{\rightmark}
     \markright{#1}
     \textcolor{structurecolor}{\Large\bfseries\adftripleflourishleft~#1~\adftripleflourishright}
   \end{center}
-  \begin{enumerate}}{
-  \end{enumerate}}
+  \begin{enumerate}
+}{
+  \end{enumerate}
+}
 
 \def\relsec{\endgroup start}
 \def\endrelsec{end\begingroup\def \@currenvir {relsec}}
@@ -1488,3 +1490,9 @@
 
 % restore the tt default family to lmodern tt family
 \renewcommand\ttdefault{lmtt}
+
+\RequirePackage{tasks}
+\settasks{label=(\alph*), label-width=2em}
+
+\renewcommand*{\(}{\begin{math} \displaystyle }%
+\renewcommand*{\)}{\end{math}}%
