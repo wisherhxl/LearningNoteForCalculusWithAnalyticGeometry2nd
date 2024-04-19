@@ -12,7 +12,7 @@
 \begin{questions}
   \item Among the words ``integer'', ``rational'', and ``irrational'', state the ones that apply to
   \begin{tasks}(4)
-    \task \( -\frac{2}{3}\);
+    \task \(-\frac{2}{3}\);
     \task \(0\);
     \task \(\frac{45}{9}\);
     \task \(0.75\);
@@ -77,5 +77,71 @@
     \item $ \left| 1 - 3x^2 \right| = 3x^2 - 1 $ if $ x \geq 1 $.
     \item $ \left| \sqrt{10} - 10 \right| = 10 - \sqrt{10} $.
   \end{solution}
+  \item Solve the following inequalities:
+  \begin{tasks}(3)
+    \task $ x(x - 1) > 0 $;
+    \task $ (x - 1)(x + 2) < 0 $;
+    \task $ x^2 + 4x - 21 > 0 $;
+    \task $ 2x^2 + x < 3 $;
+    \task $ 4x^2 + 10x - 6 < 0 $;
+    \task $ x^2 + 2x + 4 > 0 $;
+  \end{tasks}
+  \begin{note}
+    \begin{tikzpicture}
+      % Define the center and axis lengths of the hyperbola
+      \def\a{2}
 
+      % Draw the x axis
+      \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+
+      % Draw the parabola
+      \draw[domain=-2:2,smooth,variable=\x,blue] plot ({\x},{(\x)^2 - \a});
+
+      % Draw the vertices
+      \filldraw[blue] ({sqrt(\a)},0) circle (1pt) node[below right] {root};
+      \filldraw[blue] ({-sqrt(\a)},0) circle (1pt) node[below left] {root};
+
+      % Write text at a specific position
+      \node[right] at (2,1) {$+$};
+      \node[left] at (-2,1) {$+$};
+      \node[above] at (0,-1) {$-$};
+
+    \end{tikzpicture}
+  \end{note}
+  \item Recall that $\sqrt{a}$ is a real number if and only if $a \geq 0$, and find the values of $x$ for which each of the following is a real number:
+  \begin{tasks}(2)
+    \task $\sqrt{4-x^2}$;
+    \task $\sqrt{x^2-9}$;
+    \task \(\frac{1}{\sqrt{4-3x}}\);
+    \task \(\frac{1}{\sqrt{x^2-x-12}}\);
+  \end{tasks}
+  \item Find the values of $x$ for which each of the following is positive:
+  \begin{tasks}(2)
+    \task \(\frac{x}{x^2+4}\);
+    \task \(\frac{x}{x^2-4}\);
+    \task \(\frac{x+1}{x-3}\);
+    \task \(\frac{x^2-1}{x^2-3x}\);
+  \end{tasks}
+  \item State the values of $a$ for which the following inequalities are valid:
+  \begin{tasks}(2)
+    \task $a \leq a$;
+    \task $a<a$;
+  \end{tasks}
+  \item If $a \leq b$ and $b \leq a$, what conclusion can be drawn about $a$ and $b$?
+  \item \begin{tasks}
+    \task If $a<b$ is true, is it also necessarily true that $a \leq b$?
+    \task If $a \leq b$ is true, is it also necessarily true that $a<b$?
+  \end{tasks}
+  \item State whether each pair of points lies on a horizontal or a vertical line:
+  \begin{tasks}(2)
+    \task $(-2, -5)$, $(-2, -3)$;
+    \task $(-2, -5)$, $(7, -5)$;
+    \task $(-3, 4)$, $(6, 4)$;
+    \task $(2, -11)$, $(2, 5)$;
+    \task $(2, 2)$, $(-13, 2)$;
+    \task $(-7, -7)$, $(-7, 7)$;
+    \task $(3, 5)$, $(3, -2)$;
+    \task $(-1, -2)$, $(2, -2)$.
+  \end{tasks}
+  \item Three vertices of a rectangle are $(-1, 2)$, $(3, -5)$, $(-1, -5)$. What is the fourth vertex?
 \end{questions}
