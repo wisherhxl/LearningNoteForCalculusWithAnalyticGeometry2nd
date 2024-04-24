@@ -87,27 +87,170 @@
     \task $ x^2 + 2x + 4 > 0 $;
   \end{tasks}
   \begin{note}
-    \begin{tikzpicture}
-      % Define the center and axis lengths of the hyperbola
-      \def\a{2}
+    \begin{multicols}{2}
+      \begin{tikzpicture}
+        % Define the center and axis lengths of the hyperbola
+        \def\a{2}
 
-      % Draw the x axis
-      \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+        % Draw the x axis
+        \draw[->] (-3,0) -- (3,0) node[right] {$x$};
 
-      % Draw the parabola
-      \draw[domain=-2:2,smooth,variable=\x,blue] plot ({\x},{(\x)^2 - \a});
+        % Draw the parabola
+        \draw[domain=-2:2,smooth,variable=\x,blue] plot ({\x},{(\x)^2 - \a});
 
-      % Draw the vertices
-      \filldraw[blue] ({sqrt(\a)},0) circle (1pt) node[below right] {root};
-      \filldraw[blue] ({-sqrt(\a)},0) circle (1pt) node[below left] {root};
+        % Draw the vertices
+        \filldraw[blue] ({sqrt(\a)},0) circle (1pt) node[below right] {root};
+        \filldraw[blue] ({-sqrt(\a)},0) circle (1pt) node[below left] {root};
 
-      % Write text at a specific position
-      \node[right] at (2,1) {$+$};
-      \node[left] at (-2,1) {$+$};
-      \node[above] at (0,-1) {$-$};
+        % Write text at a specific position
+        \node[right] at (2,1) {$+$};
+        \node[left] at (-2,1) {$+$};
+        \node[above] at (0,-1) {$-$};
 
-    \end{tikzpicture}
+      \end{tikzpicture}
+      \columnbreak
+
+      Quick tips for quadratic functions:
+      \begin{enumerate}
+        \item Draw the $x$-axis and plot the function.
+        \item Mark where it crosses the $x$-axis.
+        \item For $x > 0$, it's above the axis. For $x < 0$, it's below.
+        \item If the quadratic term's negative, flip the graph!
+      \end{enumerate}
+    \end{multicols}
   \end{note}
+  \begin{solution}
+    \begin{tasks}(2)
+      \task $ x(x - 1) > 0 $;
+      {
+        \begin{note}
+        \begin{tikzpicture}
+          \def\a{0.5}
+          \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+          \draw[domain=-1:1,smooth,variable=\x,blue] plot ({\x},{(\x)^2 - \a});
+          \filldraw[blue] ({-sqrt(\a)},0) circle (1pt) node[below left] {$0$};
+          \filldraw[blue] ({sqrt(\a)},0) circle (1pt) node[below right] {$1$};
+          \node[right] at (1,0.5) {$+$};
+          \node[left] at (-1,0.5) {$+$};
+          \node[above] at (0,-0.5) {$-$};
+        \end{tikzpicture}
+      \end{note}
+      $x<0$ and $x>1$
+      }
+      \task $ (x - 1)(x + 2) < 0 $;
+      {
+        \begin{note}
+          \begin{tikzpicture}
+            \def\a{0.5}
+            \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+            \draw[domain=-1:1,smooth,variable=\x,blue] plot ({\x},{(\x)^2 - \a});
+            \filldraw[blue] ({-sqrt(\a)},0) circle (1pt) node[below left] {$-2$};
+            \filldraw[blue] ({sqrt(\a)},0) circle (1pt) node[below right] {$1$};
+            \node[right] at (1,0.5) {$+$};
+            \node[left] at (-1,0.5) {$+$};
+            \node[above] at (0,-0.5) {$-$};
+          \end{tikzpicture}
+        \end{note}
+        $-2<x<1$
+      }
+      \task $ x^2 + 4x - 21 > 0 $;
+      {
+        \begin{note}
+          \begin{tikzpicture}
+            \def\a{0.3}
+            \draw[-] (-\a,\a) node[left] {$1$} -- (\a,-\a) node[right] {$7$};
+            \draw[-] (-\a,-\a) node[left] {$1$} -- (\a,\a) node[right] {$-3$};
+          \end{tikzpicture}
+
+          $ (x+7)(x-3) > 0 $
+
+          \begin{tikzpicture}
+            \def\a{0.5}
+            \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+            \draw[domain=-1:1,smooth,variable=\x,blue] plot ({\x},{(\x)^2 - \a});
+            \filldraw[blue] ({-sqrt(\a)},0) circle (1pt) node[below left] {$-7$};
+            \filldraw[blue] ({sqrt(\a)},0) circle (1pt) node[below right] {$3$};
+            \node[right] at (1,0.5) {$+$};
+            \node[left] at (-1,0.5) {$+$};
+            \node[above] at (0,-0.5) {$-$};
+          \end{tikzpicture}
+        \end{note}
+        $x<-7$ and $x>3$
+      }
+      \task $ 2x^2 + x < 3 $;
+      {
+        \begin{note}
+          $2x^2 + x -3 < 0$
+
+          \begin{tikzpicture}
+            \def\a{0.3}
+            \draw[-] (-\a,\a) node[left] {$2$} -- (\a,-\a) node[right] {$3$};
+            \draw[-] (-\a,-\a) node[left] {$1$} -- (\a,\a) node[right] {$-1$};
+          \end{tikzpicture}
+
+          $ (2x+3)(x-1) < 0 $
+
+          \begin{tikzpicture}
+            \def\a{0.5}
+            \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+            \draw[domain=-1:1,smooth,variable=\x,blue] plot ({\x},{(\x)^2 - \a});
+            \filldraw[blue] ({-sqrt(\a)},0) circle (1pt) node[below left] {$-\frac{3}{2}$};
+            \filldraw[blue] ({sqrt(\a)},0) circle (1pt) node[below right] {$1$};
+            \node[right] at (1,0.5) {$+$};
+            \node[left] at (-1,0.5) {$+$};
+            \node[above] at (0,-0.5) {$-$};
+          \end{tikzpicture}
+        \end{note}
+        $-\frac{3}{2} < x < 1$
+      }
+      \task $ 4x^2 + 10x - 6 < 0 $;
+      {
+        \begin{note}
+          \begin{tikzpicture}
+            \def\a{0.3}
+            \draw[-] (-\a,\a) node[left] {$2$} -- (\a,-\a) node[right] {$6$};
+            \draw[-] (-\a,-\a) node[left] {$2$} -- (\a,\a) node[right] {$-1$};
+          \end{tikzpicture}
+
+          $ (2x+6)(2x-1) < 0 $
+
+          \begin{tikzpicture}
+            \def\a{0.5}
+            \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+            \draw[domain=-1:1,smooth,variable=\x,blue] plot ({\x},{(\x)^2 - \a});
+            \filldraw[blue] ({-sqrt(\a)},0) circle (1pt) node[below left] {$-3$};
+            \filldraw[blue] ({sqrt(\a)},0) circle (1pt) node[below right] {$\frac{1}{2}$};
+            \node[right] at (1,0.5) {$+$};
+            \node[left] at (-1,0.5) {$+$};
+            \node[above] at (0,-0.5) {$-$};
+          \end{tikzpicture}
+        \end{note}
+        $-3<x<\frac{1}{2}$
+      }
+      \task $ x^2 + 2x + 4 > 0 $;
+      {
+        \begin{note}
+          \begin{tikzpicture}
+            \def\a{0.3}
+            \draw[-] (-\a,\a) node[left] {$1$} -- (\a,-\a) node[right] {$2$};
+            \draw[-] (-\a,-\a) node[left] {$1$} -- (\a,\a) node[right] {$2$};
+          \end{tikzpicture}
+
+          $ (x+2)^2 > 0 $
+
+          \begin{tikzpicture}
+            \def\a{0.5}
+            \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+            \draw[domain=-1:1,smooth,variable=\x,blue] plot ({\x},{(\x)^2});
+            \filldraw[blue] (0,0) circle (1pt) node[below] {$-2$};
+            \node[right] at (1,0.5) {$+$};
+            \node[left] at (-1,0.5) {$+$};
+          \end{tikzpicture}
+        \end{note}
+        all x
+      }
+    \end{tasks}
+  \end{solution}
   \item Recall that $\sqrt{a}$ is a real number if and only if $a \geq 0$, and find the values of $x$ for which each of the following is a real number:
   \begin{tasks}(2)
     \task $\sqrt{4-x^2}$;
