@@ -129,7 +129,7 @@
   \end{note}
 
   \begin{solution}
-    \begin{tasks}(2)
+    \begin{tasks}
       \task $ x(x - 1) > 0 $;
       {
       \begin{note}
@@ -251,7 +251,9 @@
       \end{note}
       all x
       }
+
     \end{tasks}
+
   \end{solution}
   \item Recall that $\sqrt{a}$ is a real number if and only if $a \geq 0$, and find the values of $x$ for which each of the following is a real number:
   \begin{tasks}
@@ -481,4 +483,149 @@
 
   \end{solution}
 
+  \item Find the distance between each pair of points: \label{sec_01_02:1}
+
+  \begin{tasks}(2)
+    \task $(1,2)$, $(6,7)$;
+    \task $(2,5)$, $(-1,3)$;
+    \task $(-7, 3)$, $(1, -2)$;
+    \task $(a, b)$, $(b, a)$.
+  \end{tasks}
+  \begin{tasks}
+    \task $(1,2)$, $(6,7)$;
+    \begin{solution}
+      $d=\sqrt{(6-1)^2+(7-2)^2}=5\sqrt{2}$
+    \end{solution}
+    \task $(2,5)$, $(-1,3)$;
+    \begin{solution}
+      $d=\sqrt{(2+1)^2+(5-3)^2}=\sqrt{13}$
+    \end{solution}
+    \task $(-7, 3)$, $(1, -2)$;
+    \begin{solution}
+      $d=\sqrt{(1+7)^2+(3+2)^2}=\sqrt{89}$
+    \end{solution}
+    \task $(a, b)$, $(b, a)$.
+    \begin{solution}
+      $d=\sqrt{(b-a)^2+(a-b)^2}=\left| b-a \right| \sqrt{2}$
+    \end{solution}
+  \end{tasks}
+
+  \item In Problem \ref{sec_01_02:1} find the midpoint of the segment joining each pair of points.
+
+  \begin{tasks}
+    \task $(1,2)$, $(6,7)$;
+    \begin{solution}
+      \(x=\frac{6+1}{2} = \frac{7}{2}\), \(y=\frac{7+2}{2}=\frac{9}{2}\)
+    \end{solution}
+    \task $(2,5)$, $(-1,3)$;
+    \begin{solution}
+      \(x=\frac{2-1}{2}=\frac{1}{2}\), \(y=\frac{5+3}{2}=4\)
+    \end{solution}
+    \task $(-7, 3)$, $(1, -2)$;
+    \begin{solution}
+      \(x=\frac{-7+1}{2}=-3\), \(y=\frac{3-2}{2}=\frac{1}{2}\)
+    \end{solution}
+    \task $(a, b)$, $(b, a)$.
+    \begin{solution}
+      \(x=\frac{a+b}{2}\), \(y=\frac{a+b}{2}\)
+    \end{solution}
+  \end{tasks}
+
+  \item Draw a sketch indicating the points (x, y) in the plane for which
+  \begin{tasks}(2)
+    \task $x<2$;
+    \task $-1<y \leq 2$;
+    \task $0 \leq x \leq 1$ and $0 \leq y \leq 1$;
+    \task $x=-1$;
+    \task $y=3$;
+    \task $x=y$.
+  \end{tasks}
+  \begin{tasks}
+    \task $x<2$;
+    \begin{solution}
+      \begin{tikzpicture} % rectangle
+        % Region where x < 2
+        \fill[blue!20] (-3,3) -- (-3,-3) -- (2,-3) -- (2,3) -- cycle;
+        \draw[blue, dashed] (2,-3) -- (2,3);
+        \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+        \node[below] at (2,0) {$x = 2$};
+      \end{tikzpicture}
+    \end{solution}
+    \task $-1<y \leq 2$;
+    \begin{solution}
+      \begin{tikzpicture} % rectangle
+        % Region where x < 2
+        \fill[blue!20] (-3,2) -- (-3,-1) -- (3,-1) -- (3,2) -- cycle;
+        \draw[blue, dashed] (-3,-1) -- (3,-1);
+        \draw[blue] (-3,2) -- (3,2);
+        \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+        \node[below right] at (0,2) {$y = 2$};
+        \node[below right] at (0,-1) {$y = -1$};
+      \end{tikzpicture}
+    \end{solution}
+    \task $0 \leq x \leq 1$ and $0 \leq y \leq 1$;
+    \begin{solution}
+      \begin{tikzpicture} % rectangle
+        % Region where x < 2
+        \fill[blue!20] (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
+        \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+        \draw[blue] (0,0) -- (1,0);
+        \draw[blue] (1,0) -- (1,1);
+        \draw[blue] (1,1) -- (0,1);
+        \draw[blue] (0,1) -- (0,0);
+        \node[left] at (0,1) {$y = 1$};
+        \node[below] at (1,0) {$x = 1$};
+      \end{tikzpicture}
+    \end{solution}
+    \task $x=-1$;
+    \begin{solution}
+      \begin{tikzpicture} % rectangle
+        \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+        \draw[blue] (-1,3) -- (-1,-3);
+        \node[below] at (-1,0) {$x = -1$};
+      \end{tikzpicture}
+    \end{solution}
+    \task $y=3$;
+    \begin{solution}
+      \begin{tikzpicture} % rectangle
+        \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+        \draw[blue] (-3,2) -- (3,2);
+        \node[below right] at (0,2) {$y = 3$};
+      \end{tikzpicture}
+    \end{solution}
+    \task $x=y$.
+    \begin{solution}
+      \begin{tikzpicture} % rectangle
+        \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+        \draw[blue] (-2,-2) -- (2,2);
+        \node[below right] at (1,1) {$x = y$};
+      \end{tikzpicture}
+    \end{solution}
+  \end{tasks}
+\item Use the distance formula to show that the points $(-2, 1)$, $(2,2)$, and $(10, 4)$ lie on a straight line.
+\begin{proof}
+  Given points $P_1(-2, 1)$, $P_2(2,2)$ and $P_3(10,4)$.
+  
+  Using the distance formula, the distance between $P_1$ and $P_2$ is:
+
+  $d_{12} = \sqrt{(2+2)^2+(2-1)^2}=\sqrt{17}$,
+
+  The distance between $P_2$ and $P_3$ is:
+
+  $d_{23} = \sqrt{(10-2)^2+(4-2)^2}=\sqrt{68}=2\sqrt{17}$,
+
+  And the distance between $P_1$ and $P_3$ is:
+
+  $d_{13} = \sqrt{(10+2)^2+(4-1)^2}=\sqrt{153}=3\sqrt{17}$.
+
+  Now, we observe that $d_{13} = d_{12}+d_{23}$.
+
+  This verifies that the points $(-2, 1)$, $(2,2)$, and $(10, 4)$ lie on a straight line.
+\end{proof}
 \end{questions}
